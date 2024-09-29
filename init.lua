@@ -38,6 +38,25 @@ require("lazy").setup({
     {
     	"zenbones-theme/zenbones.nvim",
     	dependencies = { "rktjmp/lush.nvim" }
+    },
+    {
+	  "kdheepak/lazygit.nvim",
+	  cmd = {
+	    "LazyGit",
+	    "LazyGitConfig",
+	    "LazyGitCurrentFile",
+	    "LazyGitFilter",
+	    "LazyGitFilterCurrentFile",
+	  },
+	  -- optional for floating window border decoration
+	  dependencies = {
+	    "nvim-lua/plenary.nvim",
+	  },
+	  -- setting the keybinding for LazyGit with 'keys' is recommended in
+	  -- order to load the plugin when the command is run for the first time
+	  keys = {
+	    { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
+	  }
     }
 },
     
@@ -53,3 +72,4 @@ vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live gr
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
 vim.cmd('colorscheme zenbones')
+vim.cmd('set wrap!')
