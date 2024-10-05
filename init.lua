@@ -36,10 +36,6 @@ require("lazy").setup({
 	dependencies = { 'nvim-lua/plenary.nvim' }
     },
     {
-    	"zenbones-theme/zenbones.nvim",
-    	dependencies = { "rktjmp/lush.nvim" }
-    },
-    {
 	  "kdheepak/lazygit.nvim",
 	  cmd = {
 	    "LazyGit",
@@ -57,6 +53,12 @@ require("lazy").setup({
 	  keys = {
 	    { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" }
 	  }
+    },
+    {
+	    "zenbones-theme/zenbones.nvim",
+	     dependencies = "rktjmp/lush.nvim",
+	     lazy = false,
+             priority = 1000,
     }
 },
     
@@ -71,5 +73,7 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
-vim.cmd('colorscheme zenbones')
 vim.cmd('set wrap!')
+vim.cmd('set termguicolors')
+vim.cmd('set background=light')
+vim.cmd('colorscheme zenbones')
