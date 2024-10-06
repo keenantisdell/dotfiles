@@ -29,7 +29,7 @@ disabled = #707880
 width = 100%
 height = 24pt
 radius = 6
-
+bottom = true
 ; dpi = 96
 
 background = ${colors.background}
@@ -51,7 +51,7 @@ separator-foreground = ${colors.disabled}
 font-0 = monospace;2
 
 modules-left = xworkspaces xwindow
-modules-right = filesystem pulseaudio xkeyboard memory cpu wlan eth date
+modules-right = pulseaudio battery date
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -101,16 +101,18 @@ label-empty-padding = 1
 type = internal/xwindow
 label = %title:0:60:...%
 
-[module/filesystem]
-type = internal/fs
-interval = 25
-
 mount-0 = /
 
 label-mounted = %{F#F0C674}%mountpoint%%{F-} %percentage_used%%
 
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.disabled}
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+poll-interval = 5
 
 [module/pulseaudio]
 type = internal/pulseaudio
