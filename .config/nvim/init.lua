@@ -55,10 +55,7 @@ require("lazy").setup({
 	  }
     },
     {
-	    "zenbones-theme/zenbones.nvim",
-	     dependencies = "rktjmp/lush.nvim",
-	     lazy = false,
-             priority = 1000,
+	    "catppuccin/nvim", name = "catppuccin", priority = 1000
     }
 },
     
@@ -76,4 +73,4 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 vim.cmd('set wrap!')
 vim.cmd('set termguicolors')
 vim.cmd('set background=light')
-vim.cmd('colorscheme zenbones')
+vim.cmd('colorscheme catppuccin-frappe')
