@@ -74,3 +74,4 @@ vim.cmd('set wrap!')
 vim.cmd('set termguicolors')
 vim.cmd('set background=light')
 vim.cmd('colorscheme catppuccin-frappe')
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
