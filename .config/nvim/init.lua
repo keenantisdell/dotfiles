@@ -74,6 +74,7 @@ vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help ta
 vim.cmd('set wrap!')
 vim.cmd('set termguicolors')
 vim.cmd('set background=light')
+vim.cmd('set expandtab')
 vim.cmd('set tabstop=4')
 vim.cmd('set shiftwidth=4')
 vim.cmd('colorscheme catppuccin-frappe')
