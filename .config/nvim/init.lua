@@ -36,6 +36,7 @@ require("lazy").setup({
     	'nvim-telescope/telescope.nvim', tag = '0.1.8',
 	dependencies = { 'nvim-lua/plenary.nvim' }
     },
+    {"neovim/nvim-lspconfig"},
     {
 	  "kdheepak/lazygit.nvim",
 	  cmd = {
@@ -58,7 +59,7 @@ require("lazy").setup({
     {
 	    "catppuccin/nvim", name = "catppuccin", priority = 1000
     },
-    {
+{"shortcuts/no-neck-pain.nvim", version = "*"},    {
   'saghen/blink.cmp',
   -- optional: provides snippets for the snippet source
   dependencies = { 'rafamadriz/friendly-snippets' },
@@ -131,4 +132,6 @@ vim.cmd('set expandtab')
 vim.cmd('set tabstop=4')
 vim.cmd('set shiftwidth=4')
 vim.cmd('colorscheme catppuccin-frappe')
+vim.cmd('NoNeckPain')
+vim.lsp.enable('clangd')
 vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
