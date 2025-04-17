@@ -131,7 +131,15 @@ vim.cmd('set background=light')
 vim.cmd('set expandtab')
 vim.cmd('set tabstop=4')
 vim.cmd('set shiftwidth=4')
+vim.cmd('set signcolumn=yes')
+
 vim.cmd('colorscheme catppuccin-frappe')
 vim.cmd('NoNeckPain')
 vim.lsp.enable('clangd')
+vim.diagnostic.config({
+  virtual_text = true,      -- show diagnostics inline
+  signs = true,             -- show signs in the sign column
+  underline = true,         -- underline issues in code
+})
+
 vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
