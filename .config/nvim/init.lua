@@ -59,7 +59,7 @@ require("lazy").setup({
     {
 	    "catppuccin/nvim", name = "catppuccin", priority = 1000
     },
-{"shortcuts/no-neck-pain.nvim", version = "*"},    {
+    {
   'saghen/blink.cmp',
   -- optional: provides snippets for the snippet source
   dependencies = { 'rafamadriz/friendly-snippets' },
@@ -134,7 +134,6 @@ vim.cmd('set shiftwidth=4')
 vim.cmd('set signcolumn=yes')
 
 vim.cmd('colorscheme catppuccin-frappe')
-vim.cmd('NoNeckPain')
 vim.lsp.enable('clangd')
 vim.diagnostic.config({
   virtual_text = true,      -- show diagnostics inline
